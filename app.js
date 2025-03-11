@@ -121,15 +121,4 @@ document.addEventListener('DOMContentLoaded', function() {
         currentEditingTask = null;
     });
     
-    // Add some sample tasks
-    function addSampleTasks() {
-        const sampleTasks = ['Complete the project', 'Read documentation'];
-        sampleTasks.forEach(task => {
-            const listItem = createTaskElement(task);
-            taskList.appendChild(listItem);
-        });
-    }
-
-    // Add sample tasks after the DOM is fully loaded
-    addSampleTasks();
 });
