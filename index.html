@@ -4,52 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo App</title>
-    <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100 min-h-screen py-8 flex items-center justify-center">
     <div class="container mx-auto px-4 max-w-lg sm:max-w-xl md:max-w-2xl">
         <h1 class="text-3xl md:text-4xl font-bold text-center mb-8 text-gray-800">Todo App</h1>
         
-        <!-- Add Task Form -->
+        <!-- Add Task Form (UI Only) -->
         <div class="bg-white rounded-lg shadow-md p-6 mb-6">
             <div class="flex flex-col sm:flex-row gap-2">
-                <input type="text" id="taskInput" placeholder="What needs to be done?" 
+                <input type="text" placeholder="What needs to be done?" 
                     class="flex-1 border border-gray-300 rounded-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                <button id="addTaskBtn" 
-                    class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg transition duration-200 w-full sm:w-auto">
+                <button class="bg-blue-500 text-white font-medium py-2 px-4 rounded-lg opacity-50 cursor-not-allowed" disabled>
                     Add
                 </button>
             </div>
-            
-            <!-- Edit Task Form (Hidden by default) -->
-            <div id="editTaskForm" class="hidden mt-4">
-                <div class="flex flex-col sm:flex-row gap-2">
-                    <input type="text" id="editTaskInput" 
-                        class="flex-1 border border-gray-300 rounded-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    <button id="updateTaskBtn" 
-                        class="bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-lg transition duration-200 w-full sm:w-auto">
-                        Update
-                    </button>
-                    <button id="cancelEditBtn" 
-                        class="bg-gray-500 hover:bg-gray-600 text-white font-medium py-2 px-4 rounded-lg transition duration-200 w-full sm:w-auto">
-                        Cancel
-                    </button>
-                </div>
-            </div>
         </div>
         
-        <!-- Task List Container -->
+        <!-- Task List -->
         <div class="bg-white rounded-lg shadow-md p-6">
-            <ul id="taskList" class="space-y-3">
-                <!-- Tasks will be added here dynamically -->
+            <ul class="space-y-3">
+                <!-- Task 1 -->
+                <li class="flex justify-between items-center border-b pb-2 text-gray-800">
+                    ✔ Finish homework
+                    <div class="space-x-2">
+                        <button class="bg-yellow-500 text-white py-1 px-3 rounded-lg opacity-50 cursor-not-allowed">Edit</button>
+                        <button class="bg-red-500 text-white py-1 px-3 rounded-lg opacity-50 cursor-not-allowed">Delete</button>
+                    </div>
+                </li>
+                
+                <!-- Task 2 -->
+                <li class="flex justify-between items-center border-b pb-2 text-gray-800">
+                    ✔ Read a book
+                    <div class="space-x-2">
+                        <button class="bg-yellow-500 text-white py-1 px-3 rounded-lg opacity-50 cursor-not-allowed">Edit</button>
+                        <button class="bg-red-500 text-white py-1 px-3 rounded-lg opacity-50 cursor-not-allowed">Delete</button>
+                    </div>
+                </li>
+
+                <!-- Task 3 -->
+                <li class="flex justify-between items-center border-b pb-2 text-gray-800">
+                    ✔ Exercise for 30 minutes
+                    <div class="space-x-2">
+                        <button class="bg-yellow-500 text-white py-1 px-3 rounded-lg opacity-50 cursor-not-allowed">Edit</button>
+                        <button class="bg-red-500 text-white py-1 px-3 rounded-lg opacity-50 cursor-not-allowed">Delete</button>
+                    </div>
+                </li>
             </ul>
-            <div id="emptyState" class="text-center text-gray-500">
-                No tasks yet. Add a task to get started!
+            <div class="text-center text-gray-500 mt-4">
+              
             </div>
         </div>
     </div>
-
-    <script src="app.js"></script>
 </body>
 </html>
